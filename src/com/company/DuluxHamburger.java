@@ -12,6 +12,7 @@ public class DuluxHamburger extends ClassicHamburger{
         addDrink();
         addChips();
         setName("Dulux");
+        setBasePrice(80);
     }
 
     public void addDrink(){
@@ -24,7 +25,7 @@ public class DuluxHamburger extends ClassicHamburger{
 
     @Override
     public void getOrderDetails() {
-        System.out.println(getClass().getSimpleName() + " Your " + getMeat() + "Hamburger with " + getBreadRoll() + " bread price is " + String.format("%.2f",getbasePrice()) + " Pounds");
+        System.out.println(getClass().getSimpleName() + " Your " + getName() + " " + getMeat() + " Hamburger with " + getBreadRoll() + " bread price is " + String.format("%.2f",getbasePrice()) + " Pounds");
     }
 
     @Override

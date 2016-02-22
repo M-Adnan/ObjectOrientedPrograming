@@ -27,6 +27,10 @@ public class ClassicHamburger {
         this.price = this.basePrice;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -81,6 +85,10 @@ public class ClassicHamburger {
 
     public void setPrice(double price) {
         this.price += price;
+    }
+
+    public void setBasePrice(double basePrice) {
+        this.basePrice = basePrice;
     }
 
     public void addExtra(String extra){
@@ -151,7 +159,7 @@ public class ClassicHamburger {
     }
 
     public void getOrderDetails(){
-        System.out.println(getClass().getSimpleName() + " Your " + this.meat + "Hamburger with " + this.breadRoll + " bread price is " + String.format("%.2f",basePrice) + " Pounds");
+        System.out.println(getClass().getSimpleName() + " Your " + this.name + " " +this.meat + " Hamburger with " + this.breadRoll + " bread price is " + String.format("%.2f",basePrice) + " Pounds");
         if(isLettuceAdded)
             System.out.println(getClass().getSimpleName() + " Your added lettuce to your hamburger for an additional cost of " + String.format("%.2f",extraLettucePrice) + " Pence");
         if(istomatoAdded)

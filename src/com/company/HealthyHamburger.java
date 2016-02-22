@@ -13,6 +13,7 @@ public class HealthyHamburger extends ClassicHamburger {
     public HealthyHamburger(String meat) {
         super("Brown Raye Bread", meat);
         setName("Healthy");
+        setBasePrice(50);
     }
 
     @Override
@@ -55,7 +56,7 @@ public class HealthyHamburger extends ClassicHamburger {
 
     @Override
     public void getOrderDetails() {
-        System.out.println(getClass().getSimpleName() + " Your " + getMeat() + "Hamburger with " + getBreadRoll() + " bread price is " + String.format("%.2f",getbasePrice()) + " Pounds");
+        System.out.println(getClass().getSimpleName() + " Your " + getName() +" "+ getMeat() + " Hamburger with " + getBreadRoll() + " bread price is " + String.format("%.2f",getbasePrice()) + " Pounds");
         if(isLettuceAdded())
             System.out.println(getClass().getSimpleName() + " Your added lettuce to your hamburger for an additional cost of " + String.format("%.2f",getExtraLettucePrice()) + " Pence");
         if(istomatoAdded())
