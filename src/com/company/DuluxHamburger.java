@@ -26,6 +26,7 @@ public class DuluxHamburger extends ClassicHamburger{
     @Override
     public void getOrderDetails() {
         System.out.println(getClass().getSimpleName() + " Your " + getName() + " " + getMeat() + " Hamburger with " + getBreadRoll() + " bread price is " + String.format("%.2f",getbasePrice()) + " Pounds");
+        System.out.println(getClass().getSimpleName() + " Please enjoy your " + getName() + " Hamburger with free chips and drinks");
     }
 
     @Override
