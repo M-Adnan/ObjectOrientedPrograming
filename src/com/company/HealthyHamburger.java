@@ -11,7 +11,8 @@ public class HealthyHamburger extends ClassicHamburger {
     private double extraAvocadoPrice = 0.70;
 
     public HealthyHamburger(String meat) {
-        super("Brown Raye Bread", meat, "HealthyBurger");
+        super("Brown Raye Bread", meat);
+        setName("Healthy");
     }
 
     @Override

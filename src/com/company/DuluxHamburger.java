@@ -8,10 +8,10 @@ public class DuluxHamburger extends ClassicHamburger{
     private boolean isChipsAdded = false;
 
     public DuluxHamburger(String breadRoll, String meat) {
-        super(breadRoll, meat, "DeluxBurger");
+        super(breadRoll, meat);
         addDrink();
         addChips();
-
+        setName("Dulux");
     }
 
     public void addDrink(){
@@ -24,7 +24,7 @@ public class DuluxHamburger extends ClassicHamburger{
 
     @Override
     public void getOrderDetails() {
-        super.getOrderDetails();
+        System.out.println(getClass().getSimpleName() + " Your " + getMeat() + "Hamburger with " + getBreadRoll() + " bread price is " + String.format("%.2f",getbasePrice()) + " Pounds");
     }
 
     @Override

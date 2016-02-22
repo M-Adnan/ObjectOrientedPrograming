@@ -19,12 +19,16 @@ public class ClassicHamburger {
     private double extraCarrotPrice = 0.30;
     private double extraJalapenoPrice = 0.40;
 
-    public ClassicHamburger(String breadRoll, String meat, String name){
-        this.name = name;
+    public ClassicHamburger(String breadRoll, String meat){
+        this.name = "Classic";
         this.breadRoll = breadRoll;
         this.meat = meat;
         this.basePrice = 40;
         this.price = this.basePrice;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getExtraLettucePrice() {

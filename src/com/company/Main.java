@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HealthyHamburger myburger = new HealthyHamburger("Chicken");
+        DuluxHamburger myburger = new DuluxHamburger("Brown","Chicken");
         //myburger.getOrderDetails();
         myburger.addExtra("ToMato");
         myburger.addExtra("carrot");
