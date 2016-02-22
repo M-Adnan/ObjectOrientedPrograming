@@ -7,6 +7,8 @@ public class HealthyHamburger extends ClassicHamburger {
 
     private boolean isCabbageAdded = false;
     private boolean isAvocadoAdded = false;
+    private double extraCabbagePrice = 0.50;
+    private double extraAvocadoPrice = 0.70;
 
     public HealthyHamburger(String meat) {
         super("Brown Raye Bread", meat, "HealthyBurger");
@@ -34,7 +36,7 @@ public class HealthyHamburger extends ClassicHamburger {
             System.out.println(getClass().getSimpleName() + " Cabbage has already been added to your hamburger");
         }else{
             isCabbageAdded = true;
-            setPrice(.50);
+            setPrice(extraCabbagePrice);
             System.out.println(getClass().getSimpleName() + " Cabbage has been added to your hamburger");
         }
     }
@@ -45,7 +47,7 @@ public class HealthyHamburger extends ClassicHamburger {
             System.out.println(getClass().getSimpleName() + " Avocado has already been added to your hamburger");
         }else{
             isAvocadoAdded = true;
-            setPrice(.70);
+            setPrice(extraAvocadoPrice);
             System.out.println(getClass().getSimpleName() + " Avocado has been added to your hamburger");
         }
     }
@@ -61,6 +63,10 @@ public class HealthyHamburger extends ClassicHamburger {
             System.out.println(getClass().getSimpleName() + " Your added Carrot to your hamburger for an additional cost of " + String.format("%.2f",getExtraCarrotPrice()) + " Pence");
         if(isJalapenoAdded())
             System.out.println(getClass().getSimpleName() + " Your added Jalapeno to your hamburger for an additional cost of " + String.format("%.2f",getExtraJalapenoPrice()) + " Pence");
+        if(isCabbageAdded)
+            System.out.println(getClass().getSimpleName() + " Your added Cabbage to your hamburger for an additional cost of " + String.format("%.2f",extraCabbagePrice) + " Pence");
+        if(isAvocadoAdded)
+            System.out.println(getClass().getSimpleName() + " Your added Avocado to your hamburger for an additional cost of " + String.format("%.2f",extraAvocadoPrice) + " Pence");
         System.out.println("Total price of your order is : " + String.format("%.2f",getPrice()));
     }
 }

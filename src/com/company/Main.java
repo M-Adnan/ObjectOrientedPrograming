@@ -4,10 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ClassicHamburger myburger = new ClassicHamburger("Brown","Chicken","Classic");
+        HealthyHamburger myburger = new HealthyHamburger("Chicken");
         //myburger.getOrderDetails();
         myburger.addExtra("ToMato");
         myburger.addExtra("carrot");
+        myburger.addExtra("cabbage");
         myburger.getOrderDetails();
 
     }
