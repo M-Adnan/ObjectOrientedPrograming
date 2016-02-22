@@ -89,6 +89,7 @@ public class ClassicHamburger {
 
     public void setBasePrice(double basePrice) {
         this.basePrice = basePrice;
+        this.price = basePrice;
     }
 
     public void addExtra(String extra){
